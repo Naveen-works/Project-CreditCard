@@ -1,4 +1,3 @@
-import React from 'react';
 import { Outlet, NavLink, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { LayoutDashboard, CreditCard, LogOut, User } from 'lucide-react';
@@ -19,6 +18,14 @@ const SidebarLink = ({ to, icon: Icon, children }) => (
         <span className="font-medium">{children}</span>
     </NavLink>
 );
+
+import PropTypes from 'prop-types';
+
+SidebarLink.propTypes = {
+    to: PropTypes.string.isRequired,
+    icon: PropTypes.elementType.isRequired,
+    children: PropTypes.node.isRequired
+};
 
 const DashboardLayout = () => {
     const navigate = useNavigate();

@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import AuthLayout from './layouts/AuthLayout';
 import DashboardLayout from './layouts/DashboardLayout';
@@ -24,6 +24,16 @@ const AdminRoute = ({ children }) => {
   if (user.role !== 'APPROVER') return <Navigate to="/dashboard" replace />;
 
   return children;
+};
+
+import PropTypes from 'prop-types';
+
+ProtectedRoute.propTypes = {
+  children: PropTypes.node.isRequired
+};
+
+AdminRoute.propTypes = {
+  children: PropTypes.node.isRequired
 };
 
 const App = () => {

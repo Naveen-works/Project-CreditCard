@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Button from '../../../components/Button/Button';
@@ -34,7 +34,7 @@ const RegisterForm = () => {
         try {
             await register(formData);
             navigate('/login');
-        } catch (err) {
+        } catch {
             setError('Registration failed');
         } finally {
             setIsLoading(false);

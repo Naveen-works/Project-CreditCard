@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Button from '../../../components/Button/Button';
@@ -90,7 +90,7 @@ const LoginForm = () => {
             </form>
 
             <div className="mt-6 text-center text-sm text-gray-400">
-                Don't have an account?{' '}
+                Don&apos;t have an account?{' '}
                 <Link to="/register" className="text-primary hover:text-neon-purple transition-colors">
                     Create one
                 </Link>

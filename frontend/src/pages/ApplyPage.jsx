@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Card from '../components/Card/Card';
 import Input from '../components/Input/Input';
 import Button from '../components/Button/Button';
 import axios from 'axios';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 
 const ApplyPage = () => {
     const navigate = useNavigate();

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Card from '../components/Card/Card';
 import axios from 'axios';
-import { User, Mail, CreditCard, Calendar, DollarSign, Activity } from 'lucide-react';
+import { Mail, CreditCard, Calendar, DollarSign, Activity } from 'lucide-react';
 
 const ProfilePage = () => {
     const [user, setUser] = useState({});
@@ -59,8 +59,8 @@ const ProfilePage = () => {
             {application ? (
                 <Card className="relative overflow-hidden">
                     <div className={`absolute top-0 right-0 px-4 py-2 rounded-bl-xl text-xs font-bold ${application.status === 'APPROVED' ? 'bg-green-500/20 text-green-400' :
-                            application.status === 'REJECTED' ? 'bg-red-500/20 text-red-400' :
-                                'bg-yellow-500/20 text-yellow-400'
+                        application.status === 'REJECTED' ? 'bg-red-500/20 text-red-400' :
+                            'bg-yellow-500/20 text-yellow-400'
                         }`}>
                         {application.status}
                     </div>
@@ -115,7 +115,7 @@ const ProfilePage = () => {
             ) : (
                 <Card>
                     <div className="text-center py-8">
-                        <p className="text-gray-400 mb-4">You haven't applied for a credit card yet.</p>
+                        <p className="text-gray-400 mb-4">You haven&apos;t applied for a credit card yet.</p>
                     </div>
                 </Card>
             )}
