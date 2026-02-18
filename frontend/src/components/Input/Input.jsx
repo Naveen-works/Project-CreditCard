@@ -1,8 +1,7 @@
-import { forwardRef } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import { cn } from '../../lib/utils';
 
-const Input = forwardRef(({ label, error, className, id, ...props }, ref) => {
+const Input = React.forwardRef(({ label, error, className, id, ...props }, ref) => {
     return (
         <div className="w-full space-y-2">
             {label && (
@@ -34,12 +33,5 @@ const Input = forwardRef(({ label, error, className, id, ...props }, ref) => {
 });
 
 Input.displayName = "Input";
-
-Input.propTypes = {
-    label: PropTypes.string,
-    error: PropTypes.string,
-    className: PropTypes.string,
-    id: PropTypes.string.isRequired
-};
 
 export default Input;

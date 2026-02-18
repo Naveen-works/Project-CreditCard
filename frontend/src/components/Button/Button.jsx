@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '../../lib/utils';
 import { Loader2 } from 'lucide-react';
@@ -50,17 +50,6 @@ const Button = ({
             )}
         </motion.button>
     );
-};
-
-import PropTypes from 'prop-types';
-
-Button.propTypes = {
-    children: PropTypes.node.isRequired,
-    variant: PropTypes.oneOf(['primary', 'secondary', 'outline', 'ghost', 'danger']),
-    size: PropTypes.oneOf(['sm', 'md', 'lg']),
-    className: PropTypes.string,
-    isLoading: PropTypes.bool,
-    disabled: PropTypes.bool,
 };
 
 export default Button;

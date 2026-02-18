@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-// import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Card from '../components/Card/Card';
 import Button from '../components/Button/Button';
-import { Check, Truck, LogOut } from 'lucide-react';
+import { Check, X, Truck, LogOut } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const AdminDashboardPage = () => {
@@ -34,7 +34,7 @@ const AdminDashboardPage = () => {
                 headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
             });
             fetchApplications(); // Refresh list
-        } catch {
+        } catch (error) {
             alert(`Failed to ${action} application`);
         }
     };

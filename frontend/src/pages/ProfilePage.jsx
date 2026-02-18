@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Card from '../components/Card/Card';
 import axios from 'axios';
-import { Mail, CreditCard, Calendar, DollarSign, Activity } from 'lucide-react';
+import { User, Mail, CreditCard, Calendar, DollarSign, Activity } from 'lucide-react';
 
 const ProfilePage = () => {
     const [user, setUser] = useState({});
@@ -115,7 +115,7 @@ const ProfilePage = () => {
             ) : (
                 <Card>
                     <div className="text-center py-8">
-                        <p className="text-gray-400 mb-4">You haven&apos;t applied for a credit card yet.</p>
+                        <p className="text-gray-400 mb-4">You haven't applied for a credit card yet.</p>
                     </div>
                 </Card>
             )}

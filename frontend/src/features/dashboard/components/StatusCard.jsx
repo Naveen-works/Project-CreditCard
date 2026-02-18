@@ -1,6 +1,6 @@
-// import React from 'react';
+import React from 'react';
 import Card from '../../../components/Card/Card';
-import { CheckCircle, Clock, XCircle } from 'lucide-react';
+import { CheckCircle, Clock, XCircle, AlertCircle } from 'lucide-react';
 
 const StatusCard = ({ application }) => {
     if (!application) {
@@ -57,17 +57,6 @@ const StatusCard = ({ application }) => {
             )}
         </Card>
     );
-};
-
-import PropTypes from 'prop-types';
-
-StatusCard.propTypes = {
-    application: PropTypes.shape({
-        id: PropTypes.string,
-        status: PropTypes.string,
-        appliedDate: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Date)]),
-        creditLimit: PropTypes.number
-    })
 };
 
 export default StatusCard;

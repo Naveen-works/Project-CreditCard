@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '../../lib/utils';
 
@@ -22,14 +22,6 @@ const Card = ({ children, className, hover = false, ...props }) => {
             </div>
         </motion.div>
     );
-};
-
-import PropTypes from 'prop-types';
-
-Card.propTypes = {
-    children: PropTypes.node.isRequired,
-    className: PropTypes.string,
-    hover: PropTypes.bool
 };
 
 export default Card;
